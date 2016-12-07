@@ -115,9 +115,7 @@ class Question extends React.Component {
           : undefined}
         {!!this.props.text
           ? (
-              <p className={this.props.classes.questionText}>
-                {this.props.text}
-              </p>
+              <p className={this.props.classes.questionText} dangerouslySetInnerHTML={{__html: this.props.text}} />
             )
           : undefined}
         {validationErrors}
