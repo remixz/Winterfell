@@ -106,11 +106,7 @@ var Question = (function (_React$Component) {
           this.props.question,
           typeof this.props.renderRequiredAsterisk !== 'undefined' && this.props.input.required ? this.props.renderRequiredAsterisk() : undefined
         ) : undefined,
-        !!this.props.text ? React.createElement(
-          'p',
-          { className: this.props.classes.questionText },
-          this.props.text
-        ) : undefined,
+        !!this.props.text ? React.createElement('p', { className: this.props.classes.questionText, dangerouslySetInnerHTML: { __html: this.props.text } }) : undefined,
         validationErrors,
         React.createElement(Input, _extends({ name: this.props.questionId,
           id: this.props.questionId,
